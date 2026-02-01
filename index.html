@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ziera - Connect to Your First 100 Customers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #1F6BFF;
+        --secondary: #0B1220;
+        --text-main: #0B1220;
+        --text-soft: #5E6B85;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+        color: var(--text-main);
+        -webkit-font-smoothing: antialiased;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F2F6FF 100%);
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .fintech-card {
+        background: #FFFFFF;
+        border: 1px solid #E5ECF5;
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .fintech-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(31, 107, 255, 0.08);
+        border-color: #1F6BFF;
+      }
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 50s linear infinite;
+      }
+      .pulse-blue {
+        animation: pulseBlue 3s ease-in-out infinite;
+      }
+      @keyframes pulseBlue {
+        0%, 100% { transform: scale(1); opacity: 0.1; }
+        50% { transform: scale(1.5); opacity: 0.2; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-white">
+    <div id="root"></div>
+    <!-- Entry point untuk Vite -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
